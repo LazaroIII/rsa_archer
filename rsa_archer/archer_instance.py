@@ -13,7 +13,7 @@ log = logging.getLogger(__name__)
 class ArcherInstance:
 	"""
 	Creates archer instance object using following arguments:
-		:param inst_url - archer instance base url, without https://
+		:param inst_url - archer instance base url
 		:param instance_name - archer instance name
 		:param username - of api user
 		:param password - of api user
@@ -21,8 +21,8 @@ class ArcherInstance:
 
 	def __init__(self, inst_url, instance_name, username, password):
 
-		self.api_url_base = f"https://{inst_url}/RSAarcher/api/"
-		self.content_api_url_base = f"https://{inst_url}/RSAarcher/contentapi/"
+		self.api_url_base = f"{inst_url}/RSAarcher/api/"
+		self.content_api_url_base = f"{inst_url}/RSAarcher/contentapi/"
 		self.username = username
 		self.password = password
 		self.instance_name = instance_name
